@@ -1,0 +1,378 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"  xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="https://primefaces.org/ui">
+<h:head>
+	
+
+<meta charset="utf-8" />
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+<title>User connected</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+	<!-- <h:outputStylesheet library="css" name="resources/styleConnected.css"/> -->
+		<link rel="stylesheet" type="text/css" href="resources/styleConnected.css" /></h:head>
+
+<h:body>
+	<header>
+		<a href="#" class="logo">Bloo<span>d</span>onation<span>.</span></a>
+		
+<div class="menuToggle" onclick="toggleMenu();" />
+		
+<ul class="navigation">
+			
+<li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+			
+<li><a href="#about" onclick="toggleMenu();">About</a></li>
+			<!-- <li><a href="#center">Centers</a></li> -->
+			
+<li><a href="#menu" onclick="toggleMenu();">Benefits</a></li>
+			
+<li><a href="#temoignage" onclick="toggleMenu();">Testimony</a></li>
+			
+<li><a href="#contact" onclick="toggleMenu();">Contact Us</a></li>
+			
+<li><a href="#faq" onclick="toggleMenu();">FAQ</a></li>
+			
+<li><a><i class="fa fa-user-circle" /></a>
+				
+<div class="sub-menu">
+					
+<ul>
+					<h:outputLabel value="#{user.username}"></h:outputLabel> 
+<li><a href="user/indexProfil.xhtml" value="#{user.username}">My Profile</a></li>
+						<!-- <li><a href="#">Giving Blood</a></li> -->
+						
+<li><a href="user/indexRequest.xhtml">Requesting Blood</a></li>
+						
+<li><h:form> <h:commandLink action="#{login.logout}" value="Logout"></h:commandLink>
+	</h:form></li>
+					</ul>
+				</div>
+			</li>
+		</ul> 
+	</header>
+	<section class="banner" id="banner">
+		
+<div class="content">
+			
+<h2>you are somebady's type</h2>
+			
+<p>Blood donation helps to save people’s lives all over the world. It is a real wonder that one may save a life of others by giving his blood and it is the most precious gift ever. </p>
+			<a href="user/indexRequest.xhtml" class="btn1">Request Blood</a>
+		</div>
+	</section>
+	<section class="about" id="about">
+		
+<div class="row">
+			
+<div class="col50">
+				
+<h2 class="titleText"><span>A</span>bout Us</h2>
+				
+<p>At Blood donation , we believe  that everyone deserves to have a chance to live .Together, with donors, recipients, employees, partners and volunteers, we can save lifes. Our role is to provide lifesaving products and services in transfusion and transplantation for patients, and to safeguard country's systems of life essentials in blood, plasma, stem cells, and organs and tissues</p>
+			</div>
+			
+<div class="col50">
+				
+<div class="imgBx">
+<h:form>
+					<h:graphicImage value="/resources/blood17.jpg" alt="" />
+					</h:form>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="menu" id="menu">
+		
+<div class="title">
+			
+<h2 class="titleText"><span>B</span>enefits of Giving Blood</h2>
+			
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</div>
+		
+<div class="content">
+			
+<div class="box">
+				
+<div class="imgBx">
+<h:form>
+					<h:graphicImage value="/resources/blood14.jpg" alt="" />
+					</h:form>
+				</div>
+				
+<div class="text">
+					
+<h3>Save Lifes</h3>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="imgBx">
+<h:form>
+					<h:graphicImage value="/resources/blood2.jpg" alt="" />
+					</h:form>
+				</div>
+				
+<div class="text">
+					
+<h3>Improving Emotional Well-being</h3>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="imgBx">
+<h:form>
+					<h:graphicImage value="/resources/blood8.jpg" alt="" />
+					</h:form>
+				</div>
+				
+<div class="text">
+					
+<h3>Stimulating Blood Cell Production</h3>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="imgBx">
+<h:form>
+					<h:graphicImage value="/resources/blood1.jpg" alt="" />
+					</h:form>
+				</div>
+				
+<div class="text">
+					
+<h3>Maintaining Healthing Heart &amp; Liver</h3>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="imgBx">
+<h:form>
+					<h:graphicImage value="/resources/blood9.jpg" alt="" />
+					</h:form>
+				</div>
+				
+<div class="text">
+					
+<h3>Providing a Sense of Belonging and Reduce Isolation</h3>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="imgBx">
+					<h:form>
+					<h:graphicImage value="/resources/blood16.png" alt="" />
+					</h:form>
+				</div>
+				
+<div class="text">
+					
+<h3>Stay Safe</h3>
+				</div>
+			</div>
+		</div>
+		
+<div class="title">
+			<a href="#" class="btn">View All</a>
+		</div>
+	</section>
+	<section class="temoignage" id="temoignage">
+		
+<div class="title white">
+			
+<h2 class="titleText">They <span>S</span>aid About Blood Donation</h2>
+			
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</div>
+		
+<div class="content">
+			
+<div class="box">
+				
+<div class="imgBx">
+<h:form>
+					<h:graphicImage value="/resources/gambol.jpg" alt="" />
+					</h:form>
+				</div>
+				
+<div class="text">
+					
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+					
+<h3>Gambol</h3>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="imgBx">
+<h:form>
+					<h:graphicImage value="/resources/rimi.jpg" alt="" />
+					</h:form>				</div>
+				
+<div class="text">
+					
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+					
+<h3>Rimi</h3>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="imgBx">
+<h:form>
+					<h:graphicImage value="/resources/konane.jpg" alt="" />
+					</h:form>
+				</div>
+				
+<div class="text">
+					
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea</p>
+					
+<h3>Conan Edogawa</h3>
+				</div>
+			</div>
+		</div>
+	</section>
+	<section class="faq" id="faq">
+		
+<div class="title">
+			
+<h2 class="titleText">Foire <span>A</span>ux Questions</h2>
+			
+<p>Example of frequently asked questions</p>
+		</div>
+		
+<div class="content">
+			
+<div class="box">
+				
+<div class="text">
+					
+<h3>Why should I donate blood?</h3>
+					
+<p>The need for blood affects us all. Eight out of ten people need blood or blood products at some time in our lives. One out of every ten patients in hospital requires blood transfusion. The number of blood donations that patients receive depends on their medical condition. Although an average of three donations is transfused to a patient, some patients require many more.
+                    Blood is in constant demand for the treatment of patients involved in accidents, patients with anaemia, malaria, cancer or a bleeding disorder such as haemophilia. Many surgical operations would not be possible without the availability of blood. Blood may be needed during or following childbirth or for an exchange transfusion in newborn babies.
+                    The need for blood never stops. Blood donors save lives. Every blood donation gives the person who receives it a new chance at life.</p>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="text">
+					
+<h3>Who may donate blood?</h3>
+					
+<p>Donors should be between the ages of 18 and 65, weigh at least 50 kg and not have donated blood within the previous 12 weeks (for males). The criteria, which are applied before a person can be accepted as a blood donor, are very strict. Not everyone can be a blood donor. This is designed to protect the health of the donor as well as the health of the patient who receives the blood.
+                    For example, people who have certain medical conditions or who are taking certain types of medication are not permitted to donate blood. People whose sexual behaviour places them at increased risk of transmitting infections through transfusion are also not permitted to donate. If any of the deferral criteria apply to you, or if for any reason you think that your blood may be unsafe to transfuse to a patient, you are advised not to donate.
+                    The mission of the blood transfusion service is to provide all patients with sufficient, safe, quality blood and blood products. If you are in any doubt about whether you should donate blood, please discuss it with a staff member. We know it can be disappointing if you are not able to give blood. However, we hope you will understand that our overriding responsibility is to ensure the safety of donors and the safety of the blood for patients.</p>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="text">
+					
+<h3>What do I get in return for my blood donation?</h3>
+					
+<p>Blood is donated voluntarily, freely and without payment or reward of any kind. Blood must only be donated in the spirit of altruism for patients who need blood or blood products as part of their medical treatment. Blood is donated as an act of goodwill towards a fellow human being and nothing should be expected in return for giving this gift of life.
+                    What you do get in return is a physical and emotional sense of well-being and the knowledge that you have helped to save someone's life. We all hope that someone will do the same for us when we need a blood transfusion.</p>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="text">
+					
+<h3>What does it mean to have a rare blood type?</h3>
+					
+<p>Every person has an ABO and rhesus blood group: i.e. group A, B, AB, or O and RhD negative or RhD positive. In addition to these ABO blood groups, people's red blood cells consist of many other antigens as part of their red cell structure.
+                    Occasionally, people have an unusual, specific red cell antigen. Alternatively, some individual's red cells lack an antigen which is common to most people. This would be recognised as a “rare” blood type. Some patients have antibodies against a specific blood type and in these circumstances it may be difficult to find blood from a regular blood donor which is compatible with that of the rare type of the patient.
+                    Before every blood transfusion, compatibility tests are performed on the blood of the patient and on the blood of the donor, to ensure that the transfused blood will not cause any untoward reaction in the recipient.
+                    First-time blood donors are notified by mail of their ABO blood group and RhD type, after the blood has been tested in the BTS laboratory.</p>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="text">
+					
+<h3>Is there anything special I need to do before donating?</h3>
+					
+<p>Eat at your regular mealtimes and drink plenty of fluid before you donate blood. Have a snack at least four hours before you donate, but do not eat too much right before the donation.
+                    Before you leave the blood donor clinic after your blood donation, have some tea, coffee or a soft drink to help replace the blood volume (approximately 450 ml) which has been reduced as a result of your donation.
+ 
+                    Avoid taking aspirin or aspirin-like anti-inflammatory medication in the 72 hours prior to your donation, because aspirin inhibits the function of blood platelets. If you have taken aspirin within this period, your blood platelet component cannot be transfused to a patient.</p>
+				</div>
+			</div>
+			
+<div class="box">
+				
+<div class="text">
+					
+<h3>What is the procedure when I donate blood?</h3>
+					
+<p>Firstly, you will be asked to provide personal details such as your name, address, age, weight, ID number and/or date of birth. A medical history is taken by means of a written questionnaire.
+                    These questions are designed to ascertain that it is medically safe for you to donate blood and that the recipient of your blood will not be harmed in any way. In addition, very personal questions relating to your mode of life and sexual behaviour are asked to ascertain that you are not at increased risk of potentially transmitting infection through transfusion. People are asked to exclude themselves from blood donation if any of the deferral criteria apply to them.
+                    A finger prick test is performed in order to ascertain if your haemoglobin level is within a safe range for donation purposes. Potential donors will be permitted to donate only if this measurement is within the defined, acceptable range. If everything is in order you will proceed to donate your blood.</p>
+				</div>
+			</div>			
+		</div>
+	</section>
+	<section class="contact" id="contact">
+		
+<div class="title">
+			
+<h2 class="titleText"><span>C</span>ontact Us</h2>
+			
+<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
+		</div>
+
+<div class="contactForm">
+			
+<h3>Send Message</h3>
+			<input type="text" class="inputBox" placeholder="Name" required="" />
+			<input type="email" class="inputBox" placeholder="Email" required="" />
+			<textarea placeholder="Message" class="inputBox"></textarea>
+			<button type="submit" class="btn">Send</button>
+		</div>
+		<!-- <div class="col50">
+			<div class="imgBx">
+				<img src="coeur.png">
+			</div>
+		</div> -->
+	</section>
+	
+<div class="copyrightText">
+		
+<p>Copyright 2021 <a href="#">SESNum,INE2</a>. All rights Reserved</p>
+	</div>
+	
+<script type="text/javascript">
+		window.addEventListener('scroll', function(){
+			const header = document.querySelector('header');
+			header.classList.toggle("sticky", window.scrollY &gt; 0);
+		});
+		function toggleMenu(){
+			const menuToggle = document.querySelector('.menuToggle');
+			const navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
+	</script>
+</h:body></html>

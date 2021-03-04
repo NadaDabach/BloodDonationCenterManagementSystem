@@ -1,0 +1,403 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml"  xmlns:a="http://xmlns.jcp.org/jsf/passthrough" xmlns:h="http://java.sun.com/jsf/html"  xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="https://primefaces.org/ui">
+
+<h:head>
+	<title>Profile</title>
+	<link rel="stylesheet" type="text/css" href="resources/styleProfil.css"/> 
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"/>
+	
+<style type="text/css">
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	background-image: url(resources/blood17.jpg);
+	background-position: center;
+	background-size: cover;
+	padding: 0 10px;
+}
+.main{
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  /*background: rgba(255,255,255,1);*/
+  margin: 60px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+.userProfile .user {
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin: auto;
+  margin-top: -102px;
+}
+#btn {
+  cursor: pointer;
+  position: relative;
+  transform: translate(95%,-10%);
+  width: 200px;
+  padding: 8px 10px;
+  margin: auto;
+  font-size: 1em;
+  color: #000;
+  background: linear-gradient(to left, #ff0157 50%, #fff);
+  display: block;
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  border-radius: 70px;
+  border: none;
+}
+#btn:hover{
+  background: #275275;
+}
+#btn span {
+  font-weight: bolder;
+}
+.form .main{
+  width: 100%;
+}
+
+.form .main .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.form-group label, .form-inline label {
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.form-group input, .form-inline input, .form-group select, .form-inline select {
+	margin-top: 10px;
+}
+
+.form-group input:hover, .form-inline input:hover, .form-group select:hover, .form-inline select:hover {
+
+	box-shadow: 0px 2px 5px -2px rgba(255,1,87,0.58);
+}
+
+.form h1{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 100px;
+  margin-top: 80px;
+  /*color: #fec107;*/
+  /*color: #ff0157;*/
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+
+}
+.form h1 span {
+	/*color: white;*/
+  color: #ff0157;
+  text-transform: uppercase; 
+}
+.form-group .form-control,
+.form-group select{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.form-inline select{
+  width: 20%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.form-group textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+.notNow {
+	margin-top: 10px;
+	text-align: right;
+	text-decoration: none;
+}
+
+.form-group, .form-inline {
+	text-align: left;
+	margin-top: 24px;
+}
+
+#btn1{
+	width: 100%;
+	padding: 8px 10px;
+	font-size: 1em; 
+	color: #000;
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+  margin: auto;
+  background: linear-gradient(to left, #ff0157 50%, #fff);
+  display: block;
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 70px;
+  border: none;
+}
+#btn1:hover{
+  background: #275275;
+}
+/*#btn span {
+  font-weight: bolder;
+}
+*/
+
+@media (max-width:420px) {
+  .form .main .form-group{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form .main .form-group label{
+    margin-bottom: 5px;
+  }
+  .form .main .inputfield.terms{
+    flex-direction: row;
+  }
+}
+
+</style>
+
+</h:head>
+<h:body style="background-image: url(../resources/blood17.jpg)">
+
+	<div class="form"><h1>My <span>P</span>rofile</h1></div>
+	<div class="main">
+		<div class="userProfile">
+			<h:form>
+				<h:graphicImage value="/resources/user2.png" alt="" />
+			</h:form>
+		</div>
+
+		<h:form action="UserProfile" method="post">
+		
+			<div class="form-group">
+						<h:outputLabel for="username">Username</h:outputLabel>
+						<h:inputText type="text" name="username" id="username" value="#{user.username}"  pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control"></h:inputText>
+			</div><!--full name-->
+				
+			<div class="form-group">
+						<h:outputLabel for="fullname">Full Name</h:outputLabel>
+						<h:inputText type="text" name="name"  id="fullname" value="#{user.name}"   pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control"></h:inputText>
+			</div><!--full name-->
+
+		    <div class="form-inline">
+		    	<h:outputLabel for="name">Date of Birth</h:outputLabel><br />
+	    		<h:selectOneMenu class="form-control" id="day" name="date" >
+	                
+					<f:selectItem itemValue = "#{user.day}" itemLabel = "#{user.day}" ></f:selectItem>
+	                
+<f:selectItem itemValue = "01" itemLabel = "01" />
+<f:selectItem itemValue = "02" itemLabel = "02" />
+<f:selectItem itemValue = "03" itemLabel = "03" />
+<f:selectItem itemValue = "04" itemLabel = "04" />
+<f:selectItem itemValue = "05" itemLabel = "05" />
+<f:selectItem itemValue = "06" itemLabel = "06" />
+<f:selectItem itemValue = "07" itemLabel = "07" />
+<f:selectItem itemValue = "08" itemLabel = "08" />
+<f:selectItem itemValue = "09" itemLabel = "09" />
+<f:selectItem itemValue = "10" itemLabel = "10" />
+<f:selectItem itemValue = "11" itemLabel = "11" />
+<f:selectItem itemValue = "12" itemLabel = "12" />
+<f:selectItem itemValue = "13" itemLabel = "13" />
+<f:selectItem itemValue = "14" itemLabel = "14" />
+<f:selectItem itemValue = "15" itemLabel = "15" />
+<f:selectItem itemValue = "16" itemLabel = "16" />
+<f:selectItem itemValue = "17" itemLabel = "17" />
+<f:selectItem itemValue = "18" itemLabel = "18" />
+<f:selectItem itemValue = "19" itemLabel = "19" />
+<f:selectItem itemValue = "20" itemLabel = "20" />
+<f:selectItem itemValue = "21" itemLabel = "21" />
+<f:selectItem itemValue = "22" itemLabel = "22" />
+<f:selectItem itemValue = "23" itemLabel = "23" />
+<f:selectItem itemValue = "24" itemLabel = "24" />
+<f:selectItem itemValue = "25" itemLabel = "25" />
+<f:selectItem itemValue = "26" itemLabel = "26" />
+<f:selectItem itemValue = "27" itemLabel = "27" />
+<f:selectItem itemValue = "28" itemLabel = "28" />
+<f:selectItem itemValue = "29" itemLabel = "29" />
+<f:selectItem itemValue = "30" itemLabel = "30" />
+<f:selectItem itemValue = "31" itemLabel = "31" />
+
+            	</h:selectOneMenu>
+            	
+            	
+            	<h:selectOneMenu class="form-control" name="month" id="month" >
+					
+					<f:selectItem itemValue = "#{user.month}" itemLabel = "#{user.month}" ></f:selectItem>
+<f:selectItem itemValue = "01" itemLabel = "01" />
+<f:selectItem itemValue = "02" itemLabel = "02" />
+<f:selectItem itemValue = "03" itemLabel = "03" />
+<f:selectItem itemValue = "04" itemLabel = "04" />
+<f:selectItem itemValue = "05" itemLabel = "05" />
+<f:selectItem itemValue = "06" itemLabel = "06" />
+<f:selectItem itemValue = "07" itemLabel = "07" />
+<f:selectItem itemValue = "08" itemLabel = "08" />
+<f:selectItem itemValue = "09" itemLabel = "09" />
+<f:selectItem itemValue = "10" itemLabel = "10" />
+<f:selectItem itemValue = "11" itemLabel = "11" />
+<f:selectItem itemValue = "12" itemLabel = "12" />
+					
+	            </h:selectOneMenu>
+	            
+	            
+	            <h:selectOneMenu class="form-control" id="year" name="year" >
+	            
+	            <f:selectItem itemValue = "#{user.year}" itemLabel = "#{user.year}" ></f:selectItem>
+	                
+<f:selectItem itemValue = "1950" itemLabel = "1950" />
+<f:selectItem itemValue = "1951" itemLabel = "1951" />
+<f:selectItem itemValue = "1952" itemLabel = "1952" />
+<f:selectItem itemValue = "1953" itemLabel = "1953" />
+<f:selectItem itemValue = "1954" itemLabel = "1954" />
+<f:selectItem itemValue = "1955" itemLabel = "1955" />
+<f:selectItem itemValue = "1956" itemLabel = "1956" />
+<f:selectItem itemValue = "1957" itemLabel = "1957" />
+<f:selectItem itemValue = "1958" itemLabel = "1958" />
+<f:selectItem itemValue = "1959" itemLabel = "1959" />
+<f:selectItem itemValue = "1960" itemLabel = "1960" />
+<f:selectItem itemValue = "1961" itemLabel = "1961" />
+<f:selectItem itemValue = "1962" itemLabel = "1962" />
+<f:selectItem itemValue = "1963" itemLabel = "1963" />
+<f:selectItem itemValue = "1964" itemLabel = "1964" />
+<f:selectItem itemValue = "1965" itemLabel = "1965" />
+<f:selectItem itemValue = "1966" itemLabel = "1966" />
+<f:selectItem itemValue = "1967" itemLabel = "1967" />
+<f:selectItem itemValue = "1968" itemLabel = "1968" />
+<f:selectItem itemValue = "1979" itemLabel = "1979" />	                
+<f:selectItem itemValue = "1980" itemLabel = "1980" />
+<f:selectItem itemValue = "1981" itemLabel = "1981" />
+<f:selectItem itemValue = "1982" itemLabel = "1982" />
+<f:selectItem itemValue = "1983" itemLabel = "1983" />
+<f:selectItem itemValue = "1984" itemLabel = "1984" />
+<f:selectItem itemValue = "1985" itemLabel = "1985" />
+<f:selectItem itemValue = "1986" itemLabel = "1986" />
+<f:selectItem itemValue = "1987" itemLabel = "1987" />
+<f:selectItem itemValue = "1988" itemLabel = "1988" />
+<f:selectItem itemValue = "1989" itemLabel = "1989" />
+<f:selectItem itemValue = "1990" itemLabel = "1990" />
+<f:selectItem itemValue = "1991" itemLabel = "1991" />
+<f:selectItem itemValue = "1992" itemLabel = "1992" />
+<f:selectItem itemValue = "1993" itemLabel = "1993" />
+<f:selectItem itemValue = "1994" itemLabel = "1994" />
+<f:selectItem itemValue = "1995" itemLabel = "1995" />
+<f:selectItem itemValue = "1996" itemLabel = "1996" />
+<f:selectItem itemValue = "1997" itemLabel = "1997" />
+<f:selectItem itemValue = "1998" itemLabel = "1998" />
+<f:selectItem itemValue = "1999" itemLabel = "1999" />
+<f:selectItem itemValue = "2000" itemLabel = "2000" />
+	            
+              </h:selectOneMenu>
+              
+              
+              
+            </div>
+		    <div class="form-group">
+				<h:outputLabel for="fullname">Email</h:outputLabel>
+				<h:inputText type="text" name="email" id="email" value="#{user.email}"  a:placeholder="#{user.email}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please write correct email" class="form-control"></h:inputText>
+			</div>
+			<div class="form-group">
+				<h:outputLabel for="contact_no">Contact N�</h:outputLabel>
+				<h:inputText type="text" name="contact_no" value="#{user.num_tel}"  a:placeholder="#{user.num_tel}" class="form-control"  pattern="^\d{10}$" title="10 numeric characters only" maxlength="10"></h:inputText>
+            </div><!--End form-group-->
+
+            <div class="form-group">
+				<h:outputLabel for="Adress">Adress</h:outputLabel>
+				<h:inputTextarea type="text" name="adresse" value="#{user.adresse}" id="adress"  a:placeholder="#{user.adresse}"  class="form-control"></h:inputTextarea>
+			</div><!--full name-->
+			
+			<div class="form-group">
+				<h:outputLabel for="city">City</h:outputLabel>
+				<h:selectOneMenu name="city" id="city" class="form-control" value="#{user.city}" >
+				
+						<!-- <optgroup title="Tanger-Tétouan-Al Hoceïma" label="» Tanger-Tétouan-Al Hoceïma" /> -->
+						
+<f:selectItem itemValue="Agadir" itemLabel="Agadir"></f:selectItem>
+<f:selectItem itemValue="Berrechid" itemLabel="Berrechid"></f:selectItem>
+<f:selectItem itemValue="Berkane" itemLabel="Berkane"></f:selectItem>
+<f:selectItem itemValue="Boujdour" itemLabel="Boujdour"></f:selectItem>
+<f:selectItem itemValue="Casablanca" itemLabel="Casablanca"></f:selectItem>
+<f:selectItem itemValue="Chefchaouen" itemLabel="Chefchaouen"></f:selectItem>
+<f:selectItem itemValue="Rabat" itemLabel="Rabat"></f:selectItem>
+<f:selectItem itemValue="Tetouan" itemLabel="Tetouan"></f:selectItem>
+<f:selectItem itemValue="Tanger" itemLabel="Tanger"></f:selectItem>
+<f:selectItem itemValue="Fnideq" itemLabel="Fnideq"></f:selectItem>
+<f:selectItem itemValue="Errachidia" itemLabel="Errachidia"></f:selectItem>
+<f:selectItem itemValue="Marrakech" itemLabel="Marrakech"></f:selectItem>
+				</h:selectOneMenu>
+            </div><!--city end-->
+
+            <div class="form-group">
+            	<h:outputLabel for="password">Password</h:outputLabel>
+            	<h:inputText type="password" name="password" value="#{user.password}" a:placeholder="*********" class="form-control" pattern="{6,}"></h:inputText>
+            </div><!--End form-group-->
+
+            <!-- <div class="form-group">
+            	<label for="password">Confirm Password</label>
+            	<input type="password" name="c_password" value="" placeholder="Confirm Password" class="form-control" required pattern="{6,}">
+            </div> -->
+			
+			<div class="form-group">
+				<h:commandButton id="btn" value="Update" name="submit" type="submit" class="submit-btn" action="#{User.UpdateUser()}" style="cursor: pointer;
+  position: relative;
+  transform: translate(95%,-10%);
+  width: 200px;
+  padding: 8px 10px;
+  margin: auto;
+  font-size: 1em;
+  color: #000;
+  background: linear-gradient(to left, #ff0157 50%, #fff);
+  display: block;
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  border-radius: 70px;
+  border: none;">
+				</h:commandButton>
+			</div>
+			<!-- <div class="notNow">
+				<a href="indexConnected.html">Return</a>
+			</div> -->
+		</h:form> 
+	</div>3lyach klikiti second time fach bano ? 
+	
+	<script type="text/javascript">
+		window.addEventListener('scroll', function(){
+			const header = document.querySelector('header');
+			header.classList.toggle("sticky", window.scrollY > 0);
+		});
+
+		function toggleMenu(){
+			const menuToggle = document.querySelector('.menuToggle');
+			const navigation = document.querySelector('.navigation');
+			menuToggle.classList.toggle('active');
+			navigation.classList.toggle('active');
+		}
+	</script>
+</h:body>
+</html>

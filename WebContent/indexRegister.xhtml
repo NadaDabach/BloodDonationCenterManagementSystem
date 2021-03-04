@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:a="http://xmlns.jcp.org/jsf/passthrough" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="https://primefaces.org/ui">
+<h:head>
+	
+<title>Formulaire</title>
+	<link rel="stylesheet" type="text/css" href="resources/styleFormulaire.css" /></h:head>
+<h:body>
+	
+<div class="form">
+<h1>Welcome to <span>Bloo</span>d<span>onation</span>.<br /><br />Please enter your Information</h1></div>
+	
+<div class="main">
+		<h:form>
+			
+			<div class="form-group">
+						<h:outputLabel name="fullname">Username</h:outputLabel>
+						<h:inputText type="text" value="#{User.username}" name="username" id="username" a:placeholder="Enter your username" required="" pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control" />
+			</div>
+			
+<div class="form-group">
+						<h:outputLabel>Full Name</h:outputLabel>
+						<h:inputText type="text" value="#{User.name}" name="name" id="fullname" a:placeholder="Enter your first and last name" required="" pattern="[A-Za-z/\s]+" title="Only lower and upper case and space" class="form-control" />
+			</div><!--full name-->
+			
+			
+<div class="form-group">
+				<h:outputLabel  >Gender</h:outputLabel><br />
+				<h:selectOneRadio value="#{User.gender}">
+  					    <f:selectItem itemValue = "Female" itemLabel = "Female" /> 
+   						<f:selectItem itemValue = "Male" itemLabel = "male" />
+				</h:selectOneRadio>   
+		    </div><!--gender-->
+		    
+<div class="form-group">
+				<h:outputLabel >Are you suffering from an illness ?</h:outputLabel><br />
+				    <h:selectOneMenu value="#{User.id_maladie}">
+				    <f:selectItem itemValue="Select your illness" itemLabel ="Select your illness"></f:selectItem>
+    <f:selectItems value="#{User.maladies}"  var="maladie" itemValue="#{maladie.id_maladie}" itemLabel="#{maladie.nom}"/>
+</h:selectOneMenu>
+            </div><!--End form-group-->
+		    
+<div class="form-inline">
+		    	<h:outputLabel >Date of Birth</h:outputLabel><br />
+		    	
+		    	
+	    		<h:selectOneMenu class="form-control" id="date" name="date"  value="#{User.day}" required="">
+	                
+<f:selectItem itemValue = "day" itemLabel = "day"></f:selectItem>
+	                
+<f:selectItem itemValue = "01" itemLabel = "01" />
+<f:selectItem itemValue = "02" itemLabel = "02" />
+<f:selectItem itemValue = "03" itemLabel = "03" />
+<f:selectItem itemValue = "04" itemLabel = "04" />
+<f:selectItem itemValue = "05" itemLabel = "05" />
+<f:selectItem itemValue = "06" itemLabel = "06" />
+<f:selectItem itemValue = "07" itemLabel = "07" />
+<f:selectItem itemValue = "08" itemLabel = "08" />
+<f:selectItem itemValue = "09" itemLabel = "09" />
+<f:selectItem itemValue = "10" itemLabel = "10" />
+<f:selectItem itemValue = "11" itemLabel = "11" />
+<f:selectItem itemValue = "12" itemLabel = "12" />
+<f:selectItem itemValue = "13" itemLabel = "13" />
+<f:selectItem itemValue = "14" itemLabel = "14" />
+<f:selectItem itemValue = "15" itemLabel = "15" />
+<f:selectItem itemValue = "16" itemLabel = "16" />
+<f:selectItem itemValue = "17" itemLabel = "17" />
+<f:selectItem itemValue = "18" itemLabel = "18" />
+<f:selectItem itemValue = "19" itemLabel = "19" />
+<f:selectItem itemValue = "20" itemLabel = "20" />
+<f:selectItem itemValue = "21" itemLabel = "21" />
+<f:selectItem itemValue = "22" itemLabel = "22" />
+<f:selectItem itemValue = "23" itemLabel = "23" />
+<f:selectItem itemValue = "24" itemLabel = "24" />
+<f:selectItem itemValue = "25" itemLabel = "25" />
+<f:selectItem itemValue = "26" itemLabel = "26" />
+<f:selectItem itemValue = "27" itemLabel = "27" />
+<f:selectItem itemValue = "28" itemLabel = "28" />
+<f:selectItem itemValue = "29" itemLabel = "29" />
+<f:selectItem itemValue = "30" itemLabel = "30" />
+<f:selectItem itemValue = "31" itemLabel = "31" />
+
+
+            	</h:selectOneMenu>
+            	<h:selectOneMenu class="form-control" name="month" id="month" value="#{User.month}" required="">
+	                
+<f:selectItem itemValue = "month" itemLabel = "month" ></f:selectItem>
+	                
+<f:selectItem itemValue = "01" itemLabel = "01" />
+<f:selectItem itemValue = "02" itemLabel = "02" />
+<f:selectItem itemValue = "03" itemLabel = "03" />
+<f:selectItem itemValue = "04" itemLabel = "04" />
+<f:selectItem itemValue = "05" itemLabel = "05" />
+<f:selectItem itemValue = "06" itemLabel = "06" />
+<f:selectItem itemValue = "07" itemLabel = "07" />
+<f:selectItem itemValue = "08" itemLabel = "08" />
+<f:selectItem itemValue = "09" itemLabel = "09" />
+<f:selectItem itemValue = "10" itemLabel = "10" />
+<f:selectItem itemValue = "11" itemLabel = "11" />
+<f:selectItem itemValue = "12" itemLabel = "12" />
+
+            	</h:selectOneMenu>
+	            <h:selectOneMenu class="form-control" id="year" name="year" value="#{User.year}" required="">
+                
+<f:selectItem itemValue = "year" itemLabel = "year"></f:selectItem>
+
+<f:selectItem itemValue = "1950" itemLabel = "1950" />
+<f:selectItem itemValue = "1951" itemLabel = "1951" />
+<f:selectItem itemValue = "1952" itemLabel = "1952" />
+<f:selectItem itemValue = "1953" itemLabel = "1953" />
+<f:selectItem itemValue = "1954" itemLabel = "1954" />
+<f:selectItem itemValue = "1955" itemLabel = "1955" />
+<f:selectItem itemValue = "1956" itemLabel = "1956" />
+<f:selectItem itemValue = "1957" itemLabel = "1957" />
+<f:selectItem itemValue = "1958" itemLabel = "1958" />
+<f:selectItem itemValue = "1959" itemLabel = "1959" />
+<f:selectItem itemValue = "1960" itemLabel = "1960" />
+<f:selectItem itemValue = "1961" itemLabel = "1961" />
+<f:selectItem itemValue = "1962" itemLabel = "1962" />
+<f:selectItem itemValue = "1963" itemLabel = "1963" />
+<f:selectItem itemValue = "1964" itemLabel = "1964" />
+<f:selectItem itemValue = "1965" itemLabel = "1965" />
+<f:selectItem itemValue = "1966" itemLabel = "1966" />
+<f:selectItem itemValue = "1967" itemLabel = "1967" />
+<f:selectItem itemValue = "1968" itemLabel = "1968" />
+<f:selectItem itemValue = "1979" itemLabel = "1979" />	                
+<f:selectItem itemValue = "1980" itemLabel = "1980" />
+<f:selectItem itemValue = "1981" itemLabel = "1981" />
+<f:selectItem itemValue = "1982" itemLabel = "1982" />
+<f:selectItem itemValue = "1983" itemLabel = "1983" />
+<f:selectItem itemValue = "1984" itemLabel = "1984" />
+<f:selectItem itemValue = "1985" itemLabel = "1985" />
+<f:selectItem itemValue = "1986" itemLabel = "1986" />
+<f:selectItem itemValue = "1987" itemLabel = "1987" />
+<f:selectItem itemValue = "1988" itemLabel = "1988" />
+<f:selectItem itemValue = "1989" itemLabel = "1989" />
+<f:selectItem itemValue = "1990" itemLabel = "1990" />
+<f:selectItem itemValue = "1991" itemLabel = "1991" />
+<f:selectItem itemValue = "1992" itemLabel = "1992" />
+<f:selectItem itemValue = "1993" itemLabel = "1993" />
+<f:selectItem itemValue = "1994" itemLabel = "1994" />
+<f:selectItem itemValue = "1995" itemLabel = "1995" />
+<f:selectItem itemValue = "1996" itemLabel = "1996" />
+<f:selectItem itemValue = "1997" itemLabel = "1997" />
+<f:selectItem itemValue = "1998" itemLabel = "1998" />
+<f:selectItem itemValue = "1999" itemLabel = "1999" />
+<f:selectItem itemValue = "2000" itemLabel = "2000" />
+
+
+            	</h:selectOneMenu>
+            </div><!--End form-group-->
+		    
+<div class="form-group">
+				<h:outputLabel >Email</h:outputLabel>
+				<h:inputText type="text" name="email" id="email" a:placeholder="Enter your email address" value="#{User.email}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" title="Please write correct email" class="form-control" />
+			</div>
+			
+<div class="form-group">
+				<h:outputLabel >Phone Number</h:outputLabel>
+				<h:inputText type="text" name="contact_no" value="#{User.num_tel}" a:placeholder="0**********  (Without spaces)" class="form-control" required="" pattern="^\d{10}$" title="10 numeric characters only" maxlength="10" />
+            </div><!--End form-group-->
+            
+<div class="form-group">
+				<h:outputLabel >Adress</h:outputLabel>
+				<h:inputTextarea  type="text" name="name" id="adress" value="#{User.adresse}" a:placeholder="Enter your Adress" required="" class="form-control"></h:inputTextarea >
+			</div><!--full name-->
+			
+			
+<div class="form-group">
+				<h:outputLabel >City</h:outputLabel>
+				<h:selectOneMenu name="city" id="city" class="form-control" value="#{User.city}" required="">
+					
+<f:selectItem itemValue="Select your city" itemLabel="Select your city"></f:selectItem>
+						
+<f:selectItem itemValue="Agadir" itemLabel="Agadir"></f:selectItem>
+<f:selectItem itemValue="Berrechid" itemLabel="Berrechid"></f:selectItem>
+<f:selectItem itemValue="Berkane" itemLabel="Berkane"></f:selectItem>
+<f:selectItem itemValue="Boujdour" itemLabel="Boujdour"></f:selectItem>
+<f:selectItem itemValue="Casablanca" itemLabel="Casablanca"></f:selectItem>
+<f:selectItem itemValue="Chefchaouen" itemLabel="Chefchaouen"></f:selectItem>
+<f:selectItem itemValue="Rabat" itemLabel="Rabat"></f:selectItem>
+<f:selectItem itemValue="Tetouan" itemLabel="Tetouan"></f:selectItem>
+<f:selectItem itemValue="Tanger" itemLabel="Tanger"></f:selectItem>
+<f:selectItem itemValue="Fnideq" itemLabel="Fnideq"></f:selectItem>
+<f:selectItem itemValue="Errachidia" itemLabel="Errachidia"></f:selectItem>
+<f:selectItem itemValue="Marrakech" itemLabel="Marrakech"></f:selectItem>
+
+
+				</h:selectOneMenu>
+            </div><!--city end-->
+            
+<div class="form-group">
+            	<h:outputLabel >Password</h:outputLabel>
+            	<h:inputText type="password" name="password" value="#{User.password}" a:placeholder="Enter your password" class="form-control" required="" pattern="{6,}" />
+            </div><!--End form-group-->
+            
+<div class="form-inline">
+            	<h:selectBooleanCheckbox type="checkbox" name="term" value="false" required="" />
+            	<span><b>I agree to add my Information to Blood donors List</b></span>
+            </div><!--End form-group-->
+			
+			
+<div class="form-group">
+				<h:commandButton value="Sign Up" id="btn" name="submit" type="submit" class="submit-btn" action="#{User.RegisterUser(User)}"  style="width: 100%;
+	padding: 8px 10px;
+	font-size: 1em; 
+	border: 0px;
+	background:  #ff0157;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 3px;
+	outline: none;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+	letter-spacing: 0.5px;">
+				</h:commandButton>
+			</div>
+			
+		</h:form>
+	</div>
+</h:body></html>

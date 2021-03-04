@@ -1,0 +1,178 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:a="http://xmlns.jcp.org/jsf/passthrough" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="https://primefaces.org/ui">
+<h:head>
+<title>Login and Register Form</title>
+	<link rel="stylesheet" type="text/css" href="resources/styleRegister.css" />
+	
+<style type="text/css">
+
+*{
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+.form{
+	height: 100%;
+	width: 100%;
+	background-image: linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4)),url(resources/blood17.jpg);
+	background-position: center;
+	background-size: cover;
+	position: absolute;
+}
+.form-box{
+	width: 380px;
+	height: 480px;
+	position: relative;
+	margin: 6% auto;
+	background: rgba(255,255,255,0.85);
+	padding: 5px;
+	border-radius: 27px;
+	overflow: hidden;
+}
+.button-box{
+	width: 220px;
+	margin: 35px auto;
+	position: relative;
+	box-shadow: 0 0 4px 3px #ff0157;
+	border-radius: 30px;
+}
+.toggle-btn{
+	padding: 10px 30px;
+	cursor: pointer;
+	background: transparent;
+	border: 0;
+	outline: none;
+	position: relative;
+}
+
+
+
+
+#btn {
+	top: 0;
+	left: 0;
+	position: relative;
+	width: 110px;
+	height: 100%;
+	background: linear-gradient(to right, #ff0157, #E6E6FA);
+	border-radius: 30px;
+	transition: .5s;
+}
+.social{
+	margin: 30px auto;
+	text-align: center;
+}
+.social img{
+	width: 30px;
+	margin: 0 12px;
+	box-shadow: 0 0 20px #7f7f7f3d;
+	cursor: pointer;
+	border-radius: 50%;
+}
+.input-group{
+	top: 180px;
+	position: absolute;
+	width: 280px;
+	transition: .5s;
+}
+.input-field{
+	width: 100%;
+	padding: 10px 0;
+	margin: 5px 0;
+	border-left: 0;
+	border-top: 0;
+	border-right: 0;
+	border-bottom: 1px solid #999;
+	outline: none;
+	background: transparent;
+}
+.submit-btn{
+	width: 85%;
+	padding: 10px 30px;
+	cursor: pointer;
+	display: block;
+	margin: auto;
+	background: linear-gradient(to right, #ff0157, #E6E6FA);
+	border: 0;
+	outline: none;
+	border-radius: 30px;
+}
+.check-box{
+	margin: 30px 10px 30px 0;
+}
+span{
+	color: #777;
+	font-size: 12px;
+	bottom: 68px;
+	position: absolute;
+}
+/*.form a
+{
+	color: #262626;
+	font-size: 14px;
+	font-weight: bold;
+	text-decoration: none;
+	text-align: center;
+	display: block;
+	margin-bottom: 4px;
+}*/
+#login{
+	left: 50px;
+}
+#register{
+	left: 450px;
+}
+
+</style>
+
+	</h:head>
+<h:body style="background-image: url(../resources/blood17.jpg)">
+	
+<div class="form">
+		
+<div class="form-box">
+			
+<div class="button-box">
+				
+<div id="btn" />
+				<button type="button" class="toggle-btn" onclick="login()">Log In</button>
+		<!-- <button type="button" class="toggle-btn" onclick="register()">Register</button>   -->		
+			</div>
+			
+
+		<h:form id="login" class="input-group">
+			<h:inputText type="text" class="input-field" a:placeholder="User name" value="#{login.user}" required="" />
+			<h:inputSecret type="password" class="input-field" value="#{login.pwd}" a:placeholder="Enter Password" required="" /><br></br><br></br><br></br><br></br>
+			<h:commandButton value="Login" id="log" icon="ui-icon-star" class="submit-btn" action="#{login.validateUsernamePassword()}" ajax="false">
+				</h:commandButton> 
+				<br></br> <br></br> <br></br>
+				
+			Don't have an account? <a href="indexRegister.xhtml" > Register here </a>
+		</h:form>
+		<!--  <form id="register" class="input-group">
+			<input type="text" class="input-field" placeholder="User name" required="" />
+			<input type="email" class="input-field" placeholder="Email" required="" />
+			<input type="text" class="input-field" placeholder="Enter Password" required="" />
+			<input type="checkbox" class="check-box" required="" /><span>I agree to the terms and conditions</span>
+			<button type="submit" class="submit-btn">Register</button>
+		</form>-->
+		</div>
+	</div>
+	
+<script>
+		var x = document.getElementById("login");
+		var y = document.getElementById("register");
+		var z = document.getElementById("btn");
+		function register(){
+			x.style.left = "-400px";
+			y.style.left = "50px";
+			z.style.left = "110px";
+		}
+		function login(){
+			x.style.left = "50px";
+			y.style.left = "450px";
+			z.style.left = "0px";
+		}
+	</script>
+</h:body></html>

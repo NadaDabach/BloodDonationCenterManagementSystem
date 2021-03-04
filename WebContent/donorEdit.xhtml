@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"  xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head>
+<meta charset="utf-8" />
+	
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	
+<title>Admin Page</title>
+	<link rel="stylesheet" type="text/css" href="resources/styleAdmin.css" />
+	<link rel="stylesheet"
+	href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+	crossorigin="anonymous"/>
+</h:head>
+
+<h:body>
+<header>
+
+		<a href="#" class="logo">Bloo<span>d</span>onation<span>.</span></a>
+		
+<div class="menuToggle" onclick="toggleMenu();" />
+		
+<ul class="navigation">
+			
+<li><a href="#banner" onclick="toggleMenu();">Home</a></li>
+			
+<li><a href="#stock" onclick="toggleMenu();">Stock</a></li>
+			
+<li><a href="#donors" onclick="toggleMenu();">Donors</a></li>
+			
+<li><a href="#request" onclick="toggleMenu();">Requests</a></li>
+			
+<li><a href="#handed" onclick="toggleMenu();">Handed Over</a></li>
+			
+<li><a href="#users" onclick="toggleMenu();">Users</a></li>
+		</ul>
+	</header>
+
+			<h:form action="update" method="post">
+	
+	<div class="container col-md-5">
+		<div class="card">
+			<div class="card-body">
+
+					<h2>
+            			Edit Donor
+					</h2>
+				
+				<h:outputLabel>Donor Name</h:outputLabel> 
+					<h:inputText type="text" id="donorId" value="#{editDonor.donorId}" class="form-control" name="donorId" /> 
+			       
+								
+					<h:outputLabel>Donor Name</h:outputLabel> 
+					<h:inputText type="text" id="fullName" value="#{editDonor.fullName}" class="form-control" name="donor" /> 
+				
+				<h:outputLabel for="name">Blood Group</h:outputLabel>
+				 <h:selectOneMenu class="form-control" id="blood_group" name="bloodGroup"> 
+            <f:selectItem itemValue = "#{editDonor.bloodGroup}" itemLabel = "#{editDonor.bloodGroup}" /> 
+            <f:selectItem itemValue = "A+" itemLabel = "A+" /> 
+            <f:selectItem itemValue = "A-" itemLabel = "A-" />  
+            <f:selectItem itemValue = "B+" itemLabel = "B+" />  
+            <f:selectItem itemValue = "AB+" itemLabel = "AB+" />
+            <f:selectItem itemValue = "AB-" itemLabel = "AB-" />   
+            <f:selectItem itemValue = "O+" itemLabel = "O+" />
+            <f:selectItem itemValue = "O-" itemLabel = "O-" />  
+         </h:selectOneMenu>
+				
+				
+				
+
+					<h:outputLabel>City</h:outputLabel> <h:inputText type="text"
+					value="#{editDonor.city}"
+					id="city"
+						class="form-control"
+						name="city" />
+
+					<h:outputLabel>Email</h:outputLabel> <h:inputText type="text"
+					value="#{editDonor.email}"
+					id="email"
+						 class="form-control"
+						name="email" />
+
+					<h:outputLabel>Phone number</h:outputLabel> <h:inputText type="text"
+					value="#{editDonor.phoneNumber}"
+						 class="form-control"
+						 id="phoneNumber"
+						name="phoneNumber" />
+
+				<h:commandButton id="btn1" value="Update" action="#{Donor.upd_Donordetails(editDonor)}" styleClass="btn btn-primary updateBtnStyle" />
+
+			</div>
+		</div>
+	</div>
+					</h:form>
+	
+	
+</h:body>
+
+</html>

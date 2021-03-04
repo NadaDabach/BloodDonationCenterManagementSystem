@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html" xmlns:a="http://xmlns.jcp.org/jsf/passthrough" xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="http://primefaces.org/ui">
+<h:head>
+	
+<title>Login and Register Form</title>
+	<link rel="stylesheet" type="text/css" href="resources/styleLoginAdmin.css" /></h:head>
+<h:body>
+	
+<div class="form">
+		
+<div class="form-box">
+			
+<div class="button-box">Admin Log In</div>
+			
+
+			<h:form id="login" class="input-group">
+			<p:messages autoUpdate="true" id="messages" for="Login"/>
+				<h:inputText type="email" name="email" id="email" class="input-field" a:placeholder="Enter your email" value="#{Admin.email}" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$" required="" />
+				<h:inputSecret type="password" name="password" id="password" class="input-field" a:placeholder="Enter your password" value="#{Admin.password}"  required="" /> <br></br> <br></br> <br></br>
+				<h:commandButton value="Login" id="log" icon="ui-icon-star" class="submit-btn" action="#{Admin.loginAdmin(Admin)}" ajax="false">
+				</h:commandButton> 
+				
+			</h:form>
+		</div>
+	</div>
+</h:body></html>

@@ -1,0 +1,254 @@
+<?xml version="1.0" encoding="iso-8859-1"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="en" xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" xmlns:h="http://java.sun.com/jsf/html"  xmlns:f="http://xmlns.jcp.org/jsf/core" xmlns:p="https://primefaces.org/ui">
+<h:head>
+<title>Profile</title>
+	<h:outputStylesheet library = "css" name = "resources/styleProfil.css" /> 
+		<link rel="stylesheet" type="text/css" href="resources/styleProfil.css" />
+		<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+
+
+<style type="text/css">
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	background-image: url(resources/blood17.jpg);
+	background-position: center;
+	background-size: cover;
+	padding: 0 10px;
+}
+.main{
+  max-width: 600px;
+  width: 100%;
+  background: #fff;
+  /*background: rgba(255,255,255,1);*/
+  margin: 60px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+.userProfile .user {
+  width: 130px;
+  height: 130px;
+  display: block;
+  margin: auto;
+  margin-top: -102px;
+}
+#btn {
+  cursor: pointer;
+  position: relative;
+  transform: translate(95%,-10%);
+  width: 200px;
+  padding: 8px 10px;
+  margin: auto;
+  font-size: 1em;
+  color: #000;
+  background: linear-gradient(to left, #ff0157 50%, #fff);
+  display: block;
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  letter-spacing: 2px;
+  border-radius: 70px;
+  border: none;
+}
+#btn:hover{
+  background: #275275;
+}
+#btn span {
+  font-weight: bolder;
+}
+.form .main{
+  width: 100%;
+}
+
+.form .main .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.form-group label, .form-inline label {
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.form-group input, .form-inline input, .form-group select, .form-inline select {
+	margin-top: 10px;
+}
+
+.form-group input:hover, .form-inline input:hover, .form-group select:hover, .form-inline select:hover {
+
+	box-shadow: 0px 2px 5px -2px rgba(255,1,87,0.58);
+}
+
+.form h1{
+  font-size: 30px;
+  font-weight: 700;
+  margin-bottom: 100px;
+  margin-top: 80px;
+  /*color: #fec107;*/
+  /*color: #ff0157;*/
+  color: #fff;
+  text-transform: capitalize;
+  text-align: center;
+
+}
+.form h1 span {
+	/*color: white;*/
+  color: #ff0157;
+  text-transform: uppercase; 
+}
+.form-group .form-control,
+.form-group select{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.form-inline select{
+  width: 20%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.form-group textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+.notNow {
+	margin-top: 10px;
+	text-align: right;
+	text-decoration: none;
+}
+
+.form-group, .form-inline {
+	text-align: left;
+	margin-top: 24px;
+}
+
+#btn1{
+	width: 100%;
+	padding: 8px 10px;
+	font-size: 1em; 
+	color: #000;
+	cursor: pointer;
+	outline: none;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+  margin: auto;
+  background: linear-gradient(to left, #ff0157 50%, #fff);
+  display: block;
+  text-transform: capitalize;
+  text-decoration: none;
+  text-align: center;
+  border-radius: 70px;
+  border: none;
+}
+#btn1:hover{
+  background: #275275;
+}
+/*#btn span {
+  font-weight: bolder;
+}
+*/
+
+@media (max-width:420px) {
+  .form .main .form-group{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form .main .form-group label{
+    margin-bottom: 5px;
+  }
+  .form .main .inputfield.terms{
+    flex-direction: row;
+  }
+}
+
+</style>
+
+	</h:head>
+<h:body style="background-image: url(../resources/blood17.jpg)">
+	
+	
+<div class="form">
+<h1>My <span>P</span>rofile</h1></div>
+	
+<div class="main">
+		
+<div class="userProfile">
+			<h:form>
+				<h:graphicImage value="/resources/user2.png" alt="" />
+			</h:form>
+		</div>
+		
+		<form>
+			
+<div class="form-group">
+						<h:outputLabel for="fullname">Full Name</h:outputLabel><br></br>
+						<h:outputLabel type="text" name="name" id="fullname" value="#{user.name}"  ></h:outputLabel>
+			</div><!--full name-->
+	
+			
+<div class="form-group">
+				<h:outputLabel for="gender">Gender</h:outputLabel><br />
+				<h:outputLabel type="text" name="gender" id="gender" value="#{user.gender}"  ></h:outputLabel>
+				
+		    </div><!--gender-->
+		    
+<div class="form-group">
+				<h:outputLabel >Are you suffering from a disease ?</h:outputLabel><br />
+				    <h:outputLabel type="text" name="maladie" id="maladie" value="#{user.maladie.nom}"  ></h:outputLabel>
+            </div>
+		     
+<div class="form-inline">
+		    	<h:outputLabel for="date_of_birth">Date of Birth</h:outputLabel><br />
+				<h:outputLabel type="text" name="date" id="date" value="#{user.day} - #{user.month} - #{user.year}"  ></h:outputLabel>
+
+            </div><!--End form-group-->
+		    
+<div class="form-group">
+				<h:outputLabel for="email">Email</h:outputLabel><br></br>
+		 <h:outputLabel type="text" name="email" id="email" value="#{user.email}"  ></h:outputLabel>
+ 			</div>
+			
+<div class="form-group">
+				<h:outputLabel for="contact_no">Phone Number</h:outputLabel><br></br>
+				 <h:outputLabel type="text" name="tele" id="tele" value="#{user.num_tel}"  ></h:outputLabel>
+            </div><!--End form-group-->
+            
+<div class="form-group">
+				<h:outputLabel for="Adress">Adress</h:outputLabel><br></br>
+				<h:outputLabel type="text" name="adresse" id="adresse" value="#{user.adresse}"  ></h:outputLabel>
+			</div><!--full name-->
+<div class="form-group">
+				<h:outputLabel for="city">City</h:outputLabel><br></br>
+				<h:outputLabel type="text" name="city" id="city" value="#{user.city}"  ></h:outputLabel>
+            </div><!--city end-->         
+            			
+			
+<div class="form-group">
+<a href="editProfile.xhtml" value="Edit profile" id="btn">Edit Profile</a>
+
+			</div>
+
+		</form>
+	</div>
+</h:body></html>
+

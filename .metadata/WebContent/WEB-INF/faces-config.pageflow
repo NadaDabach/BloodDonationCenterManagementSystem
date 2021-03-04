@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<pageflow:Pageflow xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:pageflow="http://www.sybase.com/suade/pageflow" id="pf16147274233080" configfile="/FinalProject/WebContent/WEB-INF/faces-config.xml">
+  <nodes xsi:type="pageflow:PFPage" name="user/indexConnected.xhtml" x="338" y="178" id="pf16147974825111" referenceLink="//@navigationRule.1/@fromViewId|" outlinks="pf16148562794052" inlinks="pf16148086002440 pf16148086002441" path="/user/indexConnected.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="indexLoginUser.xhtml" id="pf16148086002442" referenceLink="//@navigationRule.1/@navigationCase.0/@toViewId|" outlinks="pf16148086002440" inlinks="pf16148562794052" path="/indexLoginUser.xhtml"/>
+  <nodes xsi:type="pageflow:PFPage" name="user/indexRequest.xhtml" id="pf16148086002443" referenceLink="//@navigationRule.2/@fromViewId|" outlinks="pf16148086002441" path="/user/indexRequest.xhtml"/>
+  <links id="pf16148086002440" target="pf16147974825111" source="pf16148086002442" outcome="indexConnected"/>
+  <links id="pf16148086002441" target="pf16147974825111" source="pf16148086002443" outcome="indexConnected"/>
+  <links id="pf16148562794052" target="pf16148086002442" source="pf16147974825111" outcome="index"/>
+</pageflow:Pageflow>

@@ -1,0 +1,126 @@
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: 'Montserrat', sans-serif;
+}
+body{
+	background-image: url(blood17.jpg);
+	background-position: center;
+	background-size: cover;
+	padding: 0 10px;
+}
+.main{
+  max-width: 600px;
+  width: 100%;
+  /*background: #fff;*/
+  background: rgba(255,255,255,0.85);
+  margin: 60px auto;
+  box-shadow: 1px 1px 2px rgba(0,0,0,0.125);
+  padding: 30px;
+}
+.form .main{
+  width: 100%;
+}
+
+.form .main .form-group {
+  margin-bottom: 15px;
+  display: flex;
+  align-items: center;
+}
+.form-group label, .form-inline label {
+   width: 200px;
+   color: #757575;
+   margin-right: 10px;
+   font-size: 14px;
+   font-weight: 600;
+}
+
+.form-group input, .form-inline input, .form-group select, .form-inline select {
+	margin-top: 10px;
+}
+
+.form-group input:hover, .form-inline input:hover, .form-group select:hover, .form-inline select:hover {
+	/*-webkit-box-shadow: 0px 2px 5px -2px rgba(255,1,87,0.95);
+	-moz-box-shadow: 0px 2px 5px -2px rgba(255,1,87,0.95);*/
+	box-shadow: 0px 2px 5px -2px rgba(255,1,87,0.58);
+}
+
+.form h1{
+  font-size: 24px;
+  font-weight: 700;
+  margin-bottom: 0px;
+  margin-top: 50px;
+  /*color: #fec107;*/
+  color: #ff0157;
+  text-transform: uppercase;
+  text-align: center;
+}
+.form h1 span {
+	color: white;
+	text-transform: none;
+}
+.form-group .form-control,
+.form-group select{
+  width: 100%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.form-inline select{
+  width: 20%;
+  outline: none;
+  border: 1px solid #d5dbd9;
+  font-size: 15px;
+  padding: 8px 10px;
+  border-radius: 3px;
+  transition: all 0.3s ease;
+}
+.form-group textarea{
+  width: 100%;
+  height: 125px;
+  resize: none;
+}
+.notNow {
+	margin-top: 10px;
+	text-align: right;
+	text-decoration: none;
+}
+
+.form-group, .form-inline {
+	text-align: left;
+	margin-top: 24px;
+}
+
+#btn{
+	width: 100%;
+	padding: 8px 10px;
+	font-size: 1em; 
+	border: 0px;
+	background:  #ff0157;
+	color: #fff;
+	cursor: pointer;
+	border-radius: 3px;
+	outline: none;
+	margin-bottom: 10px;
+	margin-top: 10px;
+	font-weight: bold;
+	letter-spacing: 0.5px;
+}
+
+
+@media (max-width:420px) {
+  .form .main .form-group{
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .form .main .form-group label{
+    margin-bottom: 5px;
+  }
+  .form .main .inputfield.terms{
+    flex-direction: row;
+  }
+}
